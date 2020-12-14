@@ -1,8 +1,6 @@
 /**
- * @file all interfaces/classes have fields on a per-need basis, expect all of them to be underspecified (instead of
- * a full fledged python ast)
- *
- * interfaces and classes are not distinguished here. consider classes to be interfaces with methods
+ * @file all Python node classes have fields on a per-need basis (instead of
+ * a full fledged python ast). Unused fields are commented out, they are irrelevant for typing conversion.
  */
 
 
