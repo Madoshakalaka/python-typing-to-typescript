@@ -1,0 +1,926 @@
+{
+  "_PyType": "Module",
+  "body": [
+    {
+      "_PyType": "Expr",
+      "value": {
+        "_PyType": "Constant",
+        "value": "\nthis file contains `TypedDict` classes that effectively serves as json schema for serialized objects\n",
+        "kind": null
+      }
+    },
+    {
+      "_PyType": "ImportFrom",
+      "module": "typing",
+      "names": [
+        {
+          "_PyType": "alias",
+          "name": "List",
+          "asname": null
+        },
+        {
+          "_PyType": "alias",
+          "name": "Tuple",
+          "asname": null
+        },
+        {
+          "_PyType": "alias",
+          "name": "Union",
+          "asname": null
+        }
+      ],
+      "level": 0
+    },
+    {
+      "_PyType": "ImportFrom",
+      "module": "typing_extensions",
+      "names": [
+        {
+          "_PyType": "alias",
+          "name": "Literal",
+          "asname": null
+        },
+        {
+          "_PyType": "alias",
+          "name": "TypedDict",
+          "asname": null
+        }
+      ],
+      "level": 0
+    },
+    {
+      "_PyType": "ClassDef",
+      "name": "SerializedDefinition",
+      "bases": [
+        {
+          "_PyType": "Name",
+          "id": "TypedDict",
+          "ctx": {
+            "_PyType": "Load"
+          }
+        }
+      ],
+      "keywords": [],
+      "body": [
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "text",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "source_ids",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "str",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        }
+      ],
+      "decorator_list": []
+    },
+    {
+      "_PyType": "ClassDef",
+      "name": "SerializedWordform",
+      "bases": [
+        {
+          "_PyType": "Name",
+          "id": "TypedDict",
+          "ctx": {
+            "_PyType": "Load"
+          }
+        }
+      ],
+      "keywords": [],
+      "body": [
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "id",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "int",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "text",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "inflectional_category",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "pos",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "analysis",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "is_lemma",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "bool",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "as_is",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "bool",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "lemma",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "int",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "lemma_url",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "inflectional_category_plain_english",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "inflectional_category_linguistic",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "wordclass_emoji",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "definition",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "List",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Name",
+              "id": "SerializedDefinition",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        }
+      ],
+      "decorator_list": []
+    },
+    {
+      "_PyType": "ClassDef",
+      "name": "SerializedLinguisticTag",
+      "bases": [
+        {
+          "_PyType": "Name",
+          "id": "TypedDict",
+          "ctx": {
+            "_PyType": "Load"
+          }
+        }
+      ],
+      "keywords": [],
+      "body": [
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "value",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "in_plain_english",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        }
+      ],
+      "decorator_list": []
+    },
+    {
+      "_PyType": "ClassDef",
+      "name": "SerializedSearchResult",
+      "bases": [
+        {
+          "_PyType": "Name",
+          "id": "TypedDict",
+          "ctx": {
+            "_PyType": "Load"
+          }
+        }
+      ],
+      "keywords": [],
+      "body": [
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "matched_cree",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "is_lemma",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "bool",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "matched_by",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Literal",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Constant",
+                  "value": "ENGLISH",
+                  "kind": null
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "CREE",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "lemma_wordform",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "SerializedWordform",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "linguistic_breakdown_head",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "str",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "linguistic_breakdown_tail",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "str",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "preverbs",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Subscript",
+                  "value": {
+                    "_PyType": "Name",
+                    "id": "Union",
+                    "ctx": {
+                      "_PyType": "Load"
+                    }
+                  },
+                  "slice": {
+                    "_PyType": "Tuple",
+                    "elts": [
+                      {
+                        "_PyType": "Name",
+                        "id": "str",
+                        "ctx": {
+                          "_PyType": "Load"
+                        }
+                      },
+                      {
+                        "_PyType": "Name",
+                        "id": "SerializedWordform",
+                        "ctx": {
+                          "_PyType": "Load"
+                        }
+                      }
+                    ],
+                    "ctx": {
+                      "_PyType": "Load"
+                    }
+                  },
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "relevant_tags",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "SerializedLinguisticTag",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "reduplication_tags",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "str",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "initial_change_tags",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "str",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "definitions",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "SerializedDefinition",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        }
+      ],
+      "decorator_list": []
+    }
+  ],
+  "type_ignores": []
+}

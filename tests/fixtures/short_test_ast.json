@@ -1,0 +1,134 @@
+{
+  "_PyType": "Module",
+  "body": [
+    {
+      "_PyType": "Expr",
+      "value": {
+        "_PyType": "Constant",
+        "value": "\nthis file contains `TypedDict` classes that effectively serves as json schema for serialized objects\n",
+        "kind": null
+      }
+    },
+    {
+      "_PyType": "ImportFrom",
+      "module": "typing",
+      "names": [
+        {
+          "_PyType": "alias",
+          "name": "List",
+          "asname": null
+        },
+        {
+          "_PyType": "alias",
+          "name": "Tuple",
+          "asname": null
+        },
+        {
+          "_PyType": "alias",
+          "name": "Union",
+          "asname": null
+        }
+      ],
+      "level": 0
+    },
+    {
+      "_PyType": "ImportFrom",
+      "module": "typing_extensions",
+      "names": [
+        {
+          "_PyType": "alias",
+          "name": "Literal",
+          "asname": null
+        },
+        {
+          "_PyType": "alias",
+          "name": "TypedDict",
+          "asname": null
+        }
+      ],
+      "level": 0
+    },
+    {
+      "_PyType": "ClassDef",
+      "name": "SerializedDefinition",
+      "bases": [
+        {
+          "_PyType": "Name",
+          "id": "TypedDict",
+          "ctx": {
+            "_PyType": "Load"
+          }
+        }
+      ],
+      "keywords": [],
+      "body": [
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "text",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Name",
+            "id": "str",
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        },
+        {
+          "_PyType": "AnnAssign",
+          "target": {
+            "_PyType": "Name",
+            "id": "source_ids",
+            "ctx": {
+              "_PyType": "Store"
+            }
+          },
+          "annotation": {
+            "_PyType": "Subscript",
+            "value": {
+              "_PyType": "Name",
+              "id": "Tuple",
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "slice": {
+              "_PyType": "Tuple",
+              "elts": [
+                {
+                  "_PyType": "Name",
+                  "id": "str",
+                  "ctx": {
+                    "_PyType": "Load"
+                  }
+                },
+                {
+                  "_PyType": "Constant",
+                  "value": "...",
+                  "kind": null
+                }
+              ],
+              "ctx": {
+                "_PyType": "Load"
+              }
+            },
+            "ctx": {
+              "_PyType": "Load"
+            }
+          },
+          "value": null,
+          "simple": 1
+        }
+      ],
+      "decorator_list": []
+    }
+  ],
+  "type_ignores": []
+}

@@ -1,0 +1,9 @@
+/.idea
+
+
+# built files
+
+/py_ast_json_to_ts.js
+/python_nodes.js
+# Project exclude paths
+/node_modules/
