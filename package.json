@@ -1,5 +1,5 @@
 {
-  "name": "python-typeddict-to-typscript-interface",
+  "name": "python-typing-to-typscript-interface",
   "version": "1.0.0",
   "description": "Convert python TypedDict's and type hints to typescript interface",
   "scripts": {
@@ -8,7 +8,7 @@
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
   },
   "bin": {
-    "ptdtts": "py_ast_json_to_ts.js"
+    "pttts": "py_ast_json_to_ts.js"
   },
   "keywords": [],
   "author": "",

@@ -41,17 +41,17 @@ interface Paragraph {
 
 # Installation
 
-`npm i -D python-typeddict-to-typscript-interface`
+`npm i -D python-typing-to-typscript-interface`
 
-This creates CLI `$ ptdtts` (Python TypedDict To TypeScript)
+This creates CLI `$ ptttts` (Python Typing To TypeScript)
 
 # Usage Examples
 
-`$ ptdtts schema.py schema.d.ts --python_interpreter venv/bin/python`
+`$ ptttts schema.py schema.d.ts --python_interpreter venv/bin/python`
 
-`$ ptdtts path/to/python/script.py path/to/output.ts`
+`$ ptttts path/to/python/script.py path/to/output.ts`
 
-Do `$ ptdtts -h` to see details
+Do `$ ptttts -h` to see details
 
 > Suggestion:
 >
