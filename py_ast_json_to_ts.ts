@@ -24,11 +24,10 @@ export function extractModuleLevelTypedDicts(source: PathLike): py.ClassDef[] {
     const _moduleObj = JSON.parse(buffer.toString())
     const module = py.Node.Create(_moduleObj)
 
-    if (! py.Node.IsType(module, py.Module)){
+    if (!py.Node.IsType(module, py.Module)) {
         console.error("Failed to parse python module")
         process.exit(1)
     }
-
 
 
     const ret: py.ClassDef[] = []
@@ -105,10 +104,10 @@ if (require.main === module) {
 // Process the data (note: error handling omitted)
     temp.open('py_ast', function (err, info) {
         if (!err) {
-            const dumpPythonASTProc = spawn(args.python_interpreter, [path.resolve(__dirname, "py_to_ast_json.py"),args.input_file,info.path], {shell:true})
-            dumpPythonASTProc.stdout.on('data', data=>console.log(data.toString()))
-            dumpPythonASTProc.stderr.on('data', data=>console.error(data.toString()))
-            dumpPythonASTProc.on('close', code=>{
+            const dumpPythonASTProc = spawn(args.python_interpreter, [path.resolve(__dirname, "py_to_ast_json.py"), args.input_file, info.path], {shell: true})
+            dumpPythonASTProc.stdout.on('data', data => console.log(data.toString()))
+            dumpPythonASTProc.stderr.on('data', data => console.error(data.toString()))
+            dumpPythonASTProc.on('close', code => {
                 convert(info.path, args.output_file)
                 return process.exit(code)
             })
@@ -118,16 +117,6 @@ if (require.main === module) {
             });
         }
     });
-
 }
-
-
-// const resultFile = ts.createSourceFile("someFileName.ts", "", ts.ScriptTarget.Latest, /*setParentNodes*/ false, ts.ScriptKind.TS);
-// const printer = ts.createPrinter({newLine: ts.NewLineKind.LineFeed});
-//
-// const result = printer.printNode(ts.EmitHint.Unspecified, makeFactorialFunction(), resultFile);
-//
-// console.log(result);
-
 
 

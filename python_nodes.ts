@@ -7,11 +7,8 @@
 
 
 import {PathLike} from "fs";
-import * as fs from "fs";
 import * as ts from "typescript"
-import {factory} from "typescript";
-import assert = require("assert");
-import * as path from "path";
+import {factory} from "typescript"
 
 
 type PrimitiveField = string | number | null
@@ -42,71 +39,9 @@ interface ClassDefNodeData extends NodeData {
 }
 
 
-type pythonASTJSON = PathLike
-type TSNodeFile = PathLike
-
-
-function convert(source: ClassDefNodeData): ts.InterfaceDeclaration {
-
-    return factory.createInterfaceDeclaration(undefined, undefined, factory.createIdentifier("ClassDef"), undefined, undefined, undefined)
-
-    // switch(source._PyType) {
-    //     // correct if wrong:
-    //     // claim: a python module corresponds to a python file corresponds to a ts source file
-    //     case "Module": {
-    //         return ts.createSourceFile("converted.ts", "", ts.ScriptTarget.Latest, /*setParentNodes*/ false, ts.ScriptKind.TS)
-    //         // return factory.createInterfaceDeclaration(undefined, undefined, factory.createIdentifier("SerializedDefinition"), undefined, undefined, undefined)
-    //
-    //     }
-    //     case constant_expression2: {
-    //         //statements;
-    //         break;
-    //     }
-    //     default: {
-    //         //statements;
-    //         break;
-    //     }
-    // }
-
-    // if (source.hasOwnProperty("body")){
-    //
-    //     this.body = []
-    //     for (const bodyNodeData of data.body){
-    //         this.body.push(new Node(bodyNodeData))
-    //     }
-    //
-    //
-    // }
-
-}
-
-// function convertToTSNodes(source: pythonASTJSON, target: TSNodeFile){
-//     const content = fs.readFileSync(source).toString()
-//     const parsed: NodeData = JSON.parse(content)
-//
-//     assert(parsed._PyType == "Module" && parsed.hasOwnProperty("body"))
-//
-//
-//     const targetBasename = path.basename(target.toString())
-//
-//     // correct if wrong:
-//     // claim: a python module corresponds to a python file corresponds to a ts source file
-//
-//     // correct if wrong: it seems the first parameter filename here doesn't do shit. i.e. providing anything works
-//     const resultFile = ts.createSourceFile(targetBasename, "", ts.ScriptTarget.Latest, /*setParentNodes*/ false, ts.ScriptKind.TS)
-//     const printer = ts.createPrinter({newLine: ts.NewLineKind.LineFeed});
-//     const result = printer.printNode(ts.EmitHint.Unspecified, convert(parsed.body), resultFile);
-//
-//
-// }
-
-
 type NodeField = Node | Node[] | string | number | null
 
 type CalculatedField = boolean
-
-
-// https://dev.to/krumpet/generic-type-guard-in-typescript-258l
 
 
 type NodeClass<T extends Node> = { _PyType(): string };
@@ -155,7 +90,7 @@ export abstract class Node {
      * @constructor
      */
     static Create(data: NodeData) {
-        let node;
+        let node: Node;
         switch (data._PyType) {
             case "Module":
                 node = new Module(data)
@@ -191,7 +126,6 @@ export abstract class Node {
             default:
                 console.debug(`Debug: Ignored irrelevant Python Node: ${data._PyType}`)
                 node = new AnyNode(data)
-
         }
         node.calculateProperties()
         return node
