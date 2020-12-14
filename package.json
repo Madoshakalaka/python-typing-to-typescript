@@ -1,11 +1,12 @@
 {
   "name": "python-typing-to-typescript",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Convert python TypedDict's and type hints to typescript interface",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "build": "tsc py_ast_json_to_ts.ts",
-    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+    "prepublish": "npm run build"
   },
   "bin": {
     "pttts": "py_ast_json_to_ts.js",

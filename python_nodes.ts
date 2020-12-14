@@ -26,7 +26,7 @@ interface NodeData {
 // }
 
 
-function isNotNodeDate<T>(a: T | NodeData): a is T {
+function isNotNodeData<T>(a: T | NodeData): a is T {
     return (a ? !a.hasOwnProperty("_PyType") : true)
 }
 
@@ -142,7 +142,7 @@ export abstract class Node {
             if (key == "_PyType") {
             } else {
 
-                if (isNotNodeDate(value)) {
+                if (isNotNodeData(value)) {
                     if (value instanceof Array) {
                         const fieldToBuild = []
                         for (const descendantNodeData of value) {
@@ -161,8 +161,7 @@ export abstract class Node {
     }
 
     /**
-     * @param data for e.g. parsed from json. Required acknowledges the fact that our Node classes have underspecified
-     * members.
+     * @param data parsed from json.
      */
     protected constructor(data: NodeData) {
         this.buildNode(data)
@@ -170,11 +169,6 @@ export abstract class Node {
 
     public static IsType<T extends Node>(n: Node, cls: NodeClass<T>): n is T {
         return cls._PyType() == n.constructor.name
-    }
-
-
-    public static IsNotType<T extends Node, V extends Node>(n: V | NodeClass<T>, cls: NodeClass<T>): n is V {
-        return cls._PyType() != n.constructor.name
     }
 
 
@@ -373,6 +367,7 @@ class Subscript extends Node {
     transform(): ts.ArrayTypeNode | ts.TupleTypeNode | ts.UnionTypeNode | ts.LiteralTypeNode {
 
         switch (this.value.id) {
+            case "list":
             case "List": {
                 if (this.slice instanceof Tuple) return undefined
                 else if (this.slice instanceof Name) {
@@ -388,6 +383,7 @@ class Subscript extends Node {
                 }
                 return undefined
             }
+            case "tuple":
             case "Tuple": {
                 if (this.slice instanceof Tuple) {
                     if (this.slice.hasTrailingEllipsis) {
