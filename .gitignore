@@ -7,3 +7,5 @@
 /python_nodes.js
 # Project exclude paths
 /node_modules/
+
+.npmignore
