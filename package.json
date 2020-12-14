@@ -1,6 +1,6 @@
 {
   "name": "python-typing-to-typscript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert python TypedDict's and type hints to typescript interface",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
