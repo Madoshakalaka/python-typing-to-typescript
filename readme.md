@@ -5,8 +5,6 @@ Note: This is in an experimental stage, currently only `TypedDict`'s are handled
 Say your API is hosted with Django or Flask,
  type hinting API responses with Python's `TypedDict` is then an only sane thing to do.
 ```python
-from typing import TypedDict
-
 class Book(TypedDict):
     pages: int
     chapters: List[Chapter]
