@@ -10,7 +10,7 @@ from typing import TypedDict
 class Book(TypedDict):
     pages: int
     chapters: List[Chapter]
-    Authors: List[str]
+    authors: List[str]
 
 class Chapter(TypedDict):
     title: str
