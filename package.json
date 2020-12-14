@@ -1,5 +1,5 @@
 {
-  "name": "python-typing-to-typscript",
+  "name": "python-typing-to-typescript",
   "version": "1.0.4",
   "description": "Convert python TypedDict's and type hints to typescript interface",
   "scripts": {
