@@ -63,9 +63,9 @@ The program parses Python script with Python's built-in `ast`, and uses `typescr
 
 # Limitations
 
-- This is currently in experimental stage. We mostly guaranteed it would work on our own [schema.py](tests/fixtures/long_test_original.py).
+- This is currently in experimental stage. We mostly guaranteed it would work on our own [schema.py](https://github.com/Madoshakalaka/python-typing-to-typescript/blob/master/tests/fixtures/long_test_original.py).
 Some Python typing features are not coded in yet (to name a few: `Any` `Dict` `dict` `Optional`). Don't be sad! 
-Most infrastructural work is already done in [python_nodes.ts](./python_nodes.ts). It will be easy to support these features. Pull request / feature requests are welcome.
+Most infrastructural work is already done in [python_nodes.ts](https://github.com/Madoshakalaka/python-typing-to-typescript/blob/master/python_nodes.ts). It will be easy to support these features. Pull request / feature requests are welcome.
 - You need to specify a python interpreter. It defaults to `python3` if not provided. 
 And **We encourage using python 3.9**. For now, this is intended to use with python 3.9. Over python versions, python ast specification
 has changed. What was an `Ellipsis` Node in python3.6 (dotdotdot notation), for example, is now a `Constant` Node. Different python versions need to be 
