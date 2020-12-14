@@ -1,3 +1,5 @@
+Note: This is in an experimental stage, currently only `TypedDict`'s are handled, the interface equivalent in Python.
+
 # TypedDict's -> Interface
 
 Say your API is hosted with Django or Flask,
@@ -41,17 +43,17 @@ interface Paragraph {
 
 # Installation
 
-`npm i -D python-typing-to-typscript-interface`
+`npm i -D python-typing-to-typscript`
 
-This creates CLI `$ ptttts` (Python Typing To TypeScript)
+This creates CLI `$ pttts` (Python Typing To TypeScript)
 
 # Usage Examples
 
-`$ ptttts schema.py schema.d.ts --python_interpreter venv/bin/python`
+`$ pttts schema.py schema.d.ts --python_interpreter venv/bin/python`
 
-`$ ptttts path/to/python/script.py path/to/output.ts`
+`$ pttts path/to/python/script.py path/to/output.ts`
 
-Do `$ ptttts -h` to see details
+Do `$ pttts -h` to see details
 
 > Suggestion:
 >
@@ -87,4 +89,3 @@ For example if you use the below file as input, the first line `User = string` w
       price: int
   }
     ```
-  
