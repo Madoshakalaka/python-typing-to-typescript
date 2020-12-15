@@ -41,7 +41,7 @@ interface Paragraph {
 
 # Installation
 
-`npm i -D python-typing-to-typscript`
+`npm i -D python-typing-to-typescript`
 
 This creates CLI `$ pttts` (Python Typing To TypeScript)
 
