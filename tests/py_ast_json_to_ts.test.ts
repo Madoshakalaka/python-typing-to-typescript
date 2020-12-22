@@ -1,8 +1,5 @@
-import {expect} from "chai";
-import * as fs from "fs";
 import * as path from 'path'
-import {convertTypedDicts, extractModuleLevelTypedDicts, convert} from "../py_ast_json_to_ts";
-
+import {convert, convertTypedDicts, extractModuleLevelTypedDicts} from "../py_ast_json_to_ts";
 
 
 it('tests extractModuleLevelTypedDicts on short example', function () {
