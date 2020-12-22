@@ -25,16 +25,16 @@ This tool provides a CLI that does the conversion for you.
 Our output:
 
 ```typescript
-interface Book {
+export interface Book {
     pages: number;
     chapters: Chapter[];
     Authors: string[];
 }
-interface Chapter {
+export interface Chapter {
     title: string;
     content: string | Paragraph[];
 }
-interface Paragraph {
+export interface Paragraph {
     content: string;
 }
 ```
@@ -86,7 +86,7 @@ For example if you use the below file as input, the first line `User = string` w
     output:
  
     ```typescript
-    interface Book{
+    export interface Book{
       owner: User
       price: int
   }

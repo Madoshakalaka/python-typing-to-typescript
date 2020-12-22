@@ -5,7 +5,7 @@
 
 
 import * as ts from "typescript"
-import {factory} from "typescript"
+import {factory, SyntaxKind} from "typescript"
 
 
 type PrimitiveField = string | number | null
@@ -283,7 +283,7 @@ export class ClassDef extends Node {
                 }
 
             }
-            return factory.createInterfaceDeclaration(undefined, undefined, factory.createIdentifier(this.name), undefined, undefined, members)
+            return factory.createInterfaceDeclaration(undefined, [factory.createModifier(SyntaxKind.ExportKeyword)], factory.createIdentifier(this.name), undefined, undefined, members)
         }
 
         return undefined
